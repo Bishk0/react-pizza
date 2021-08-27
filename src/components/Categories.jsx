@@ -3,6 +3,10 @@ import { useState } from "react";
 function Categories({ items }) {
 const [activeItem, setActiveItem] = useState(0);
 
+const onSelectItem = index => {
+  setActiveItem(index);
+}
+
   return (
     <div className='categories'>
       <ul>
@@ -10,7 +14,7 @@ const [activeItem, setActiveItem] = useState(0);
           <li
             key={item}
             className={activeItem === idx ? 'active' : ''}
-            onClick={() => setActiveItem(idx)}
+            onClick={() => onSelectItem(idx)}
           >
             {item}
           </li>

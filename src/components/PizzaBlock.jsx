@@ -5,8 +5,10 @@ import classNames from 'classnames';
 function PizzaBlock({ name, imageUrl, price, types, sizes }) {
   const [activeType, setActiveType] = useState(types[0]);
   const [activeSize, setActiveSize] = useState(sizes[0]);
+
   const availableTypes = ['традиционное', 'тонкое'];
   const availableSize = [26, 30, 40];
+  
   const onSelectType = index => setActiveType(index);
   const onSelectSize = index => setActiveSize(index);
 
